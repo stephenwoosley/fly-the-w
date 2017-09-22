@@ -4,6 +4,9 @@ var express = require("express");
 var mongojs = require("mongojs");
 var request = require("request");
 var cheerio = require("cheerio");
+var mongoose = require("mongoose");
+
+var Article = require("./models/Article.js");
 
 // Initialize Express
 var app = express();
@@ -36,6 +39,18 @@ app.get("/all", function(req, res) {
     }
   });
 })
+
+// TODO -----------
+// - Create a bootstrap front-end to display articles
+// - Grab articles at the click of a button
+// - Grab articles from more than one source
+// - Grab articles from more than once source and aggregate articles together
+// - Integrate and display images from the articles
+// - Capture first paragraph or teaser of articles
+// - Find random cubs fact of the day
+// - Allow users to choose team eventually???
+// - Create mongoose schema for articles (image, title, link, short descr)
+//<script type="text/javascript" src="https://widgets.sports-reference.com/wg.fcgi?script=br_standings&amp;params=br_standings_lg:NL,br_standings_div:C,br_standings_css:1&amp;css=1"></script>
 
 //scrape route
 app.get("/scrape", function(req, res) {
