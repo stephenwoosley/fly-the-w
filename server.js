@@ -87,7 +87,7 @@ app.get("/scrape", function(req, res) {
       var $ = cheerio.load(html);
 
       // for each article in the list, grab the title & html link        
-      $(".article-list").each(function(i, element) {
+      $("li").each(function(i, element) {
 
         var result = {};
 
