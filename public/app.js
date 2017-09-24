@@ -4,7 +4,7 @@ $(".scrape").on("click", function(event) {
     url: "/scrape"
   }).done(function(data){
     console.log(data);
-    console.log("maybe scraped?")
+    console.log("Scraped!")
   })
 });
 
@@ -18,14 +18,14 @@ $(".populate").on("click", function(){
     for (article in data) {
       $(".results").append(
         "<li class='single-article'>"+
-          "Title: " + data[article].title +
-          "<hr>"+
-          "Link: " + data[article].link +
-          "<hr>"+
+          "<img src=" + data[article].image + ">" +
+          "<br>" +
+          "<a href="+ data[article].link +">" + data[article].title + "</a>" +
+          "<hr>" +
         "</li>");
     }
 
   })
-})
+});
 
 
