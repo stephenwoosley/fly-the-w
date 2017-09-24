@@ -4,6 +4,21 @@ nav {
   background-color: #0E3386;
 }
 
+/* ------------- CUBS LOGO & STANDINGS ------------- */
+
+.centered-standings {
+  width: 65%;
+  margin-left: 15%
+}
+
+.cubs-logo {
+  text-align: center;
+}
+
+.cubs-logo img{
+  height: 350px;
+}
+
 /* ------------- SCRAPE BUTTON ------------- */
 
 .scrape-button {
