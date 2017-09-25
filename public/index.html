@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
   <link rel="stylesheet" href="./main.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,19 +13,21 @@
 </head>
 <body>
   <div class="container">
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">Fly the W!</a>
-        </div>
-      </nav>
+      <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+          <div class="center-logo">
+            <div class="navbar-item" id="center-this" href="www.cubs.com">
+              Fly the W!
+            </div>
+          </div>
+        </nav>
       <div class="standings">
-        <div class="row">
-          <div class="col s12 m6 l6">
+        <div class="columns">
+          <div class="column">
             <div class="cubs-logo">
                 <img src="./images/chc_logo.svg"/>
             </div>
           </div>
-          <div class="col s12 m6 l6">
+          <div class="column">
             <div class="centered-standings">
                 <script type="text/javascript" src="https://widgets.sports-reference.com/wg.fcgi?script=br_standings&amp;params=br_standings_lg:NL,br_standings_div:C,br_standings_css:1&amp;css=1"></script>
             </div>
@@ -31,8 +35,8 @@
         </div>
       </div>
       <div class="scrape-button">
-          <a class="waves-effect waves-light btn scrape" id="scrape"><i class="material-icons right">cached</i>Find Today's Cubs News</a>
-          <a class="waves-effect waves-light btn populate" id="scrape"><i class="material-icons right">list</i>Show Articles</a>
+          <a class="button is-info is-outlined scrape" id="scrape"><i class="material-icons right">cached</i>Find Today's Cubs News</a>
+          <a class="button is-info is-outlined populate" id="scrape"><i class="material-icons right">list</i>Show Articles</a>
       </div>
       <div class="divider"></div>
         <div class="section">

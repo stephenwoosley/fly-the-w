@@ -1,7 +1,16 @@
 /* ------------- NAVIGATION ------------- */
 
-nav {
-  background-color: #0E3386;
+/* .navbar {
+  background-color: #FF2B56;
+} */
+
+.navbar-item {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+.center-logo {
+  text-align: center;
 }
 
 /* ------------- CUBS LOGO & STANDINGS ------------- */

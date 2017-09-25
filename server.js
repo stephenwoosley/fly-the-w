@@ -2,8 +2,8 @@
 // - DONE Create a bootstrap front-end to display articles
 // - DONE Grab articles at the click of a button
 // - Grab articles from more than once source and aggregate articles together
-// - Integrate and display images from the articles
-// - Capture first paragraph or teaser of articles
+// - DONE Integrate and display images from the articles
+// - N/A Capture first paragraph or teaser of articles
 // - Find random cubs fact of the day
 // - Allow users to choose team eventually???
 // - DONE Create mongoose schema for articles (image, title, link, short descr)
