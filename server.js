@@ -17,6 +17,7 @@ var logger = require("morgan");
 var request = require("request");
 var cheerio = require("cheerio");
 var mongoose = require("mongoose");
+var path = require("path");
 var Article = require("./models/Article.js");
 
 mongoose.Promise = Promise;
@@ -57,6 +58,10 @@ db.once("open", function() {
 // MAIN ROUTE
 app.get("/", function(req, res) {
   res.send("Hello world");
+});
+
+app.get("/standings", function(req, res){
+  res.sendFile(path.join(__dirname, "./public/standings.html"));
 });
 
 // GET ALL ARTICLES

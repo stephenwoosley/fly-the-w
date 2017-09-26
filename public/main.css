@@ -16,8 +16,9 @@
 /* ------------- CUBS LOGO & STANDINGS ------------- */
 
 .centered-standings {
+  text-align: center;
   width: 65%;
-  margin-left: 15%
+  /* margin-left: 15% */
 }
 
 .cubs-logo {
