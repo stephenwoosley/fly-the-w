@@ -29,6 +29,10 @@
   height: 350px;
 }
 
+.fact-box, .fact-box-holder {
+  text-align: center;
+}
+
 /* ------------- SCRAPE BUTTON ------------- */
 
 .scrape-button {

@@ -19,7 +19,7 @@ var mongoose = require("mongoose");
 var path = require("path");
 var Article = require("./models/Article.js");
 var Fact = require("./models/Fact.js");
-var Facts = require("./models/Facts.js");
+var Facts = require("./models/Facts.json");
 
 mongoose.Promise = Promise;
 

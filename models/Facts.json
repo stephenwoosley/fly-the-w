@@ -181,13 +181,13 @@
     "question":
       "35. When a die-hard Cubs fan dies, can the fan get his or her ashes scattered at Wrigley Field?",
     "answer":
-      'No. Even "Go Cubs Go" composer Steve Goodman didn\'t get that honor, according to "Steve Goodman: Facing the Music" by Clay Eals. But Goodman\'s admirers surreptitiously scattered some of his ashes at the ballpark anyway.'
+      "No. Even \"Go Cubs Go\" composer Steve Goodman didn't get that honor, according to \"Steve Goodman: Facing the Music\" by Clay Eals. But Goodman's admirers surreptitiously scattered some of his ashes at the ballpark anyway."
   },
   {
     "question":
       "36. What seminal pop group from the 1960s recorded a Cubs theme song?",
     "answer":
-      'The Beach Boys cut a track called "Here Come the Cubs" that was loosely based on their 1966 hit "Barbara Ann."'
+      "The Beach Boys cut a track called \"Here Come the Cubs\" that was loosely based on their 1966 hit \"Barbara Ann.\""
   },
   {
     "question":
@@ -201,7 +201,7 @@
   },
   {
     "question":
-      '39. Which current Cub entertained his teammates last season by playing Adele’s "Hello" on an electric piano?',
+      "39. Which current Cub entertained his teammates last season by playing Adele’s \"Hello\" on an electric piano?",
     "answer": "Anthony Rizzo."
   },
   {
@@ -218,7 +218,7 @@
   {
     "question": "42. What TV actor once played first base for the Cubs?",
     "answer":
-      'Chuck Connors -- best known as the star of the TV show "The Rifleman" -- played 66 games for the 1951 Cubs, hitting .239 with two homers and 18 RBIs.'
+      "Chuck Connors -- best known as the star of the TV show \"The Rifleman\" -- played 66 games for the 1951 Cubs, hitting .239 with two homers and 18 RBIs."
   },
   {
     "question":
@@ -230,17 +230,17 @@
     "question":
       "44. What TV game-show host was the father of a Cubs first baseman?",
     "answer":
-      'Peter Marshall, host of "Hollywood Squares," was the father of Pete LaCock, who played for the Cubs in the 1970s.'
+      "Peter Marshall, host of \"Hollywood Squares,\" was the father of Pete LaCock, who played for the Cubs in the 1970s."
   },
   {
     "question":
-      '45. Former basketball coach Richard "Digger" Phelps is the father-in-law of which former Cubs left-hander?',
+      "45. Former basketball coach Richard \"Digger\" Phelps is the father-in-law of which former Cubs left-hander?",
     "answer": "Jamie Moyer."
   },
   {
     "question":
       "46. Who was the 19-year-old Cubs farmhand actress Mamie Van Doren married in 1965 after breaking up with noted playboy Bo Belinsky?",
-    "answer": 'Lee Meyers, a left-handed pitcher who never made it to "The Show."'
+    "answer": "Lee Meyers, a left-handed pitcher who never made it to \"The Show.\""
   },
   {
     "question":
@@ -298,7 +298,7 @@
   {
     "question": "57. What was unusual about Cubs pitcher Mordecai Brown?",
     "answer":
-      'He had only three full fingers on his pitching hand. "Three-Finger" Brown won 20 games or more six times for the Cubs in the early 1900s.'
+      "He had only three full fingers on his pitching hand. \"Three-Finger\" Brown won 20 games or more six times for the Cubs in the early 1900s."
   },
   {
     "question":
@@ -350,7 +350,7 @@
   {
     "question":
       "67. What Cubs outfielder made a sliding catch for the final out of Don Cardwell's no-hitter in 1960?",
-    "answer": 'Walt "Moose" Moryn.'
+    "answer": "Walt \"Moose\" Moryn."
   },
   {
     "question":
@@ -423,7 +423,7 @@
     "question":
       "81. Who is the only Cub in history to get six hits in a single game?",
     "answer":
-      "Sammy Sosa went 6-for-6 – a double and five singles -- in an 11-8 win over the Rockies on July 2, 1993."
+      "Sammy Sosa went 6-for-6 – a double and five singles - in an 11-8 win over the Rockies on July 2, 1993."
   },
   {
     "question":
@@ -499,7 +499,7 @@
     "answer": "Kerry Wood."
   },
   {
-    "question": '96. Who said Cubs fans were "99.44 percent scar tissue"?',
+    "question": "96. Who said Cubs fans were \"99.44 percent scar tissue\"?",
     "answer": "Columnist George Will."
   },
   {
@@ -537,30 +537,28 @@
       "Shortstop Joe Tinker, second baseman Johnny Evers and first baseman Frank Chance were the subjects of Franklin Pierce Adams' \"Baseball's Sad Lexicon\" in 1910. Adams was a sportswriter for the New York Evening Mail who was lamenting the brutal efficiency of the Cubs' double-play trio."
   },
   {
-    "question": '103. What was the "College of Coaches"?',
+    "question": "103. What was the \"College of Coaches\"?",
     "answer":
-      'In the early 1960s, the Cubs did away with the single-manager concept and had a rotation of "head coaches" instead. The experiment lasted until 1963, when Bob Kennedy was hired as manager.'
+      "In the early 1960s, the Cubs did away with the single-manager concept and had a rotation of \"head coaches\" instead. The experiment lasted until 1963, when Bob Kennedy was hired as manager."
   },
   {
-    "question": '104. What is the "Homer in the Gloamin\'"?',
+    "question": "104. What is the \"Homer in the Gloamin'\"?",
     "answer":
       "It refers to a game-winning home run hit by Cubs catcher Gabby Hartnett in the bottom of the ninth inning on Sept. 28, 1938. Wrigley did not have lights yet, and the skies were nearly black at the time of the homer. The win moved the Cubs into first place and helped them win the National League pennant that season."
   },
   {
-    "question": '105. What is the "Sandberg Game"?',
+    "question": "105. What is the \"Sandberg Game\"?",
     "answer":
       "On June 23, 1984, Ryne Sandberg went 5-for-6 against the Cardinals, including a solo home run off ace reliever (and ex-Cub) Bruce Sutter to tie the game in the ninth and a two-run homer off Sutter to tie the game again in the 10th. The Cubs went on to win 12-11 in 11 innings."
   },
   {
-    "question": '106. What is the "Kris Bryant Game"?',
+    "question": "106. What is the \"Kris Bryant Game\"?",
     "answer":
       "On June 27, 2016, Bryant slugged three homers and two doubles, a major league first and set a team record with 16 total bases. Bryant also played three positions — third base, right field and left field -- in the Cubs' 11-8 win over the Reds in Cincinnati."
   },
   {
-    "question": '107. What was "Merkle\'s Boner"?',
+    "question": "107. What was \"Merkle's Boner\"?",
     "answer":
       "In a tense 1-1 game against the Cubs during the 1908 pennant race, the New York Giants had runners on first and third with two outs in the bottom of the ninth. Al Bridwell singled home the apparent winning run, setting off a huge celebration at the Polo Grounds. As fans swarmed the field, the runner on first, Fred Merkle, ran toward the dugout and never touched second base. The Cubs retrieved the ball and tagged the base, claiming a force-out. The game was declared a tie. At season's end, the Cubs and Giants finished in a dead heat, and the pennant had to be decided by a one-game playoff, which the Cubs won. They went on to win the World Series."
   }
-];
-
-module.exports = Facts;
+]

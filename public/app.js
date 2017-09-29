@@ -28,6 +28,28 @@ $(".populate").on("click", function () {
   })
 });
 
+$(document).ready(function() {
+  $.ajax({
+    method: "GET",
+    url: "/facts"
+  }).done(function(data) {
+
+    function randomIntFromInterval(min,max) {
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+
+    let randomFact = data[randomIntFromInterval(1,107)];
+    
+    console.log(randomFact);
+
+    $(".fact-box").html(randomFact.question);
+
+    // for(fact in data) {
+    //   console.log (data[fact].question);
+    // }
+  })
+})
+
 $(".scrape-facts").on("click", function () {
   $.ajax({
     method: "GET",
