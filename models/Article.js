@@ -6,6 +6,10 @@ var Schema = mongoose.Schema;
 // Create article schema
 var ArticleSchema = new Schema({
   // title is a required string
+  source: {
+    type: String,
+    required: true
+  },
   title: {
     type: String,
     required: true
@@ -15,12 +19,14 @@ var ArticleSchema = new Schema({
     type: String,
     required: true
   },
-  image: {
-    type: String,
-    required: true
+  imageOne: {
+    type: String
+  },
+  imageTwo: {
+    type: String
   },
   // saved boolean for saved/unsaved article
-  saved: Boolean
+  // saved: Boolean
 });
 
 // Create the Article model with the ArticleSchema

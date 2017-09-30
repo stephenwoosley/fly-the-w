@@ -1,7 +1,17 @@
-$(".scrape").on("click", function (event) {
+$(".scrape-cubs-dot-com").on("click", function (event) {
   $.ajax({
     method: "GET",
-    url: "/scrape"
+    url: "/scrape-cubs-dot-com"
+  }).done(function (data) {
+    console.log(data);
+    console.log("Scraped!")
+  })
+});
+
+$(".scrape-cubbies-crib").on("click", function (event) {
+  $.ajax({
+    method: "GET",
+    url: "/scrape-cubbies-crib"
   }).done(function (data) {
     console.log(data);
     console.log("Scraped!")
@@ -16,9 +26,16 @@ $(".populate").on("click", function () {
     console.log("populate clicked!")
     console.log(data);
     for (article in data) {
+      let image = "";
+      if (data[article].imageOne) {
+        image = data[article].imageOne;
+      }
+      else {
+        image = data[article].imageTwo;
+      }
       $(".results").append(
         "<li class='single-article'>" +
-        "<img src=" + data[article].image + ">" +
+        "<img src=" + image + ">" +
         "<br>" +
         "<a href=" + data[article].link + ">" + data[article].title + "</a>" +
         "<hr>" +

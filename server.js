@@ -72,131 +72,9 @@ app.get("/facts", function(req, res) {
     res.json(Facts);
 })
 
-// app.get("/scrape-facts", function(req, res) {
-//   console.log("getting random facts...");
-
-//   request(
-//     "http://www.chicagotribune.com/sports/baseball/cubs/ct-108-things-every-cubs-fan-should-know-story.html",
-//     function(error, response, html) {
-//       console.log("making the fact of the day request...");
-
-//       var $ = cheerio.load(html);
-
-//       let facts = {question: "", answer: ""};
-//       let fact_collection = []
-
-//       let counter = 0; 
-//       let counter1 = 0;
-
-      // increment for each p element
-      // $("p strong").each(function(i, element){
-      //   counter ++;
-      //   // console.log(`counter is ${counter}`)
-      //   if($(element).text()) {
-      //     facts.question = $(element).text();
-      //     fact_collection.push(facts);
-      //   }
-      //   console.log(facts);
-      // });
-
-      // $("p").each(function(i, element){
-      //   counter ++;
-      //   // console.log(`counter is ${counter}`)
-      //   if($(element).text()) {
-      //     facts.answer = $(element).text();
-      //     fact_collection.push(facts);
-      //   }
-      //   console.log(facts);
-      // });
-
-      // console.log(`COUNTER IS ${counter}`);
-      // console.log(fact_collection);
-      // $("p").each(function(i, element) {
-      //   counter1 ++;
-      //   let textToFilter = $(element).text();
-      //     // console.log(`Paragraph Text: ${textToFilter}`);
-      //   let first_char = textToFilter.slice(0, 1);
-      //   if (isNaN(first_char) && !facts.body){
-      //       fact_collection[counter].body = textToFilter;
-      //     }
-      // })
-
-
-      // for (var i = 0; i < counter; i++) {
-      //   facts.question = $("p").text();
-      //   console.log(`NEW FACT!!!!!! {{{${facts.question}}}}`);
-      // }
-
-
-
-      // $("p").each(function(i, element) {
-      //   let textToFilter = $(element).text();
-      //   console.log(`Paragraph Text: ${textToFilter}`);
-      //   // console.log(typeof(textToFilter))
-      //   let first_char = textToFilter.slice(0, 1);
-
-        //If first_char is a number, it's a Question/Title
-        //Next .each iteration is a Description/Body
-
-        // if first char is a number and there's no question text, make text the question
-        // if(!isNaN(first_char) && !facts.question) {
-        //   facts.question = textToFilter;
-        // }
-        // else if (isNaN(first_char) && !facts.body){
-        //   facts.body = textToFilter;
-        // }
-        // else {
-        //   console.log(`paragraph was something else on iteration ${i}`);
-        // } 
-
-        // if (isNaN(first_char) && !facts.body) {
-        //   facts.body = textToFilter;
-        // }
-        // else if (!isNaN(first_char) && !facts.question) {
-        //   facts.question = textToFilter;
-        // }
-        // else {
-        //   facts.other = textToFilter;
-        // }
-        //do something
-        // function assignParText(first_char, full_text, facts) {
-        //   if (isNaN(first_char) && !first_char) {
-        //     facts.body = full_text;
-        //   }
-        //   else if (!isNaN(first_char)){
-        //     facts.question = full_text;
-        //   }
-        //   else {
-
-        //   }
-        // }
-        // console.log(`First char is ${first_char}`);
-        // facts.question = $(element)
-        //   .find("strong")
-        //   .text();
-        // facts.body = $(element).text();
-
-        // var fact = new Fact(facts);
-
-        // fact.save(function(err, doc) {
-        //   if (err) {
-        //     console.log(err);
-        //   }
-        //   else{
-        //     console.log(doc)
-        //   }
-        // })
-      //   console.log(facts);
-      //   console.log(i);
-      // });
-      
-//     }
-//   );
-// });
-
-// SCRAPE ROUTE
-app.get("/scrape", function(req, res) {
-  console.log("scraping ... ");
+// SCRAPE CUBS.COM ROUTE
+app.get("/scrape-cubs-dot-com", function(req, res) {
+  console.log("scraping cubs.com ... ");
 
   request("http://m.cubs.mlb.com/news/", function(error, response, html) {
     console.log("making a request ... ");
@@ -208,6 +86,7 @@ app.get("/scrape", function(req, res) {
     $("li").each(function(i, element) {
       var result = {};
 
+      result.source = "cubs.com";
       result.link =
         "http://m.cubs.mlb.com/" +
         $(element)
@@ -218,7 +97,7 @@ app.get("/scrape", function(req, res) {
         .find("hgroup")
         .find("h2")
         .text();
-      result.image =
+      result.imageOne =
         "http://m.cubs.mlb.com" +
         $(element)
           .find("a")
@@ -234,11 +113,56 @@ app.get("/scrape", function(req, res) {
           console.log(doc);
         }
       });
-      // store details in the db
-      // db.scraper.insert({"title": title, "link": link})
-      // results.push({ title: title, link: link });
-      // console.log("found an entry!");
-      // if(i > 30) {return false};
+    });
+    console.log("completed cubs.com scrape.");
+  });
+  res.send("Scrape Complete - Cubs.com");
+});
+
+app.get("/scrape-cubbies-crib", function(req, res) {
+  console.log("scraping cubbies crib ... ");
+
+  request("https://cubbiescrib.com/", function(error, response, html) {
+    console.log("making a request to cubbiescrib.com ... ");
+
+    // Load the HTML into cheerio
+    var $ = cheerio.load(html);
+
+    // for each article in the list, grab the title & html link
+    $(".article").each(function(i, element) {
+      let result = {};
+
+      let title = $(element)
+        .find(".title")
+        .find("a")
+        .attr("title");
+
+      let link = $(element)
+        .find(".title")
+        .find("a")
+        .attr("href");
+
+      result.source = "cubbies-crib";
+      result.link = link;
+      result.title = title;
+      result.imageOne =
+        $(element)
+          .find(".article-image")
+          .attr("style");
+      result.imageTwo =
+      $(element)
+        .find("a")
+        .attr("data-original");
+
+      let entry = new Article(result);
+
+      entry.save(function(err, doc) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(doc);
+        }
+      });
     });
     console.log("completed scrape.");
   });
